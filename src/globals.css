@@ -1,0 +1,92 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Custom styles for radio buttons */
+.radio-custom {
+  @apply appearance-none border border-gray-400 rounded-full w-5 h-5;
+  @apply cursor-pointer relative;
+}
+
+.radio-custom:checked::before {
+  @apply content-[''] block w-3 h-3 bg-black rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+
+body{
+    background-color: #f8f8f8;
+    overflow: auto;
+}
+.hover-spin {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+.hover-spin:hover {
+    transform: rotate(180deg);
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  .filter-white {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%);
+  }
+
+  /* Custom styles for rc-slider */
+.rc-slider {
+  /* margin: 0 10px; */
+}
+
+.rc-slider-rail {
+  background-color: #eee!important; /* Dark color for the rail */
+  height: 4px !important; /* Height of the rail */
+}
+
+.rc-slider-track {
+  background-color: #000 !important; /* Same color as the rail for seamless look */
+  height: 4px !important; /* Height of the track */
+}
+
+.rc-slider .rc-slider-handle {
+  border-radius: 0;
+  top: 10px;
+  width: 10px;
+  height: 17px;
+  border: none;
+  margin: 0;
+  transform: translateX(-50%);
+  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+  background-color: #000; 
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row; /* Ensure the direction is row */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Adjust the gap as needed */
+}
+
+#pdf-content {
+  width: 100%;
+  padding: 20px;
+  background: white;
+}
+
+form .FadeWrapper .p-Field label.p-FieldLabel{
+  color: #fff !important;
+}
+
+/* .image-wrapper {
+  flex: 1 1 45%;
+  max-width: 403px;
+} */
+
+
+/* .rc-slider-handle:hover {
+  border: none !important;
+  background-color: transparent !important;
+} */
+
+  
